@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Recipe Book</title>
+</head>
+<body>
+    <header>
+        <h1>My Creative Recipe Book</h1>
+    </header>
+
+    <main>
+        <section id="recipe-list" class="flex-container">
+            <!-- Display recipes here -->
+        </section>
+
+        <section id="recipe-form">
+            <h2>Add/Edit Recipe</h2>
+            <form id="addRecipeForm">
+                <input type="hidden" id="recipeIndex"> 
+
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" required></textarea>
+
+                <label for="recipeImage">Image URL:</label>
+                <input type="url" id="recipeImage" placeholder="https://example.com/image.jpg">
+
+                <button type="button" onclick="saveRecipe()">Save Recipe</button>
+                <button type="button" onclick="cancelEdit()">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
